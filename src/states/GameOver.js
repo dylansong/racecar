@@ -1,17 +1,5 @@
 export default class GameOver extends Phaser.State{
-    preload(){
-        // this.load.image('bg','./assets/sprites/imgout/7/7-pop.png');
-        // this.load.image('bg','./assets/sprites/imgout/7/restart.png');
-        // this.load.image('bg','./assets/sprites/imgout/8/8-pop.png');
-        // this.load.audio('bgmusic',['./assets/audio/bgmusic.mp3','./assets/audio/bgmusic.ogg']);
-        // this.load.image('successPop','./assets/sprites/imgout/7/7-pop.png');
-        // this.load.image('restart','./assets/sprites/imgout/7/restart.png');
-        // this.load.image('falsePop','./assets/sprites/imgout/8/8-pop.png');
-        // this.load.audio('bgmusic',['./assets/audio/bgmusic.mp3','./assets/audio/bgmusic.ogg']);
-        // this.load.audio('success',['./assets/audio/success.mp3']);
-        // this.load.audio('false',['./assets/audio/false.mp3']);
-        // this.load.audio('bonus',['./assets/audio/bonus.mp3']);
-    }
+
     create(){
        this.game.bgmusic.pause();
        this.add.sprite(0,0,'bg');
@@ -30,6 +18,6 @@ export default class GameOver extends Phaser.State{
         this.successMusic.play();
     }
     restartGame(){
-        this.game.state.start('Menu1');
+        this.game.state.start('MainMenu');
     }
 }
